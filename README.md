@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-isstream/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-isstream/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-isstream/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-isstream/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-isstream/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-isstream/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-isstream/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-isstream/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-isstream/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-isstream/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-isstream/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-isstream/build/coverage.html/index.html)
 
@@ -35,17 +35,28 @@
 ```json
 
 {
-    "name": "isstream",
-    "version": "0.1.2",
+    "author": {
+        "name": "Rod Vagg"
+    },
+    "bugs": {
+        "url": "https://github.com/rvagg/isstream/issues"
+    },
+    "dependencies": {},
     "description": "Determine if an object is a Stream",
-    "main": "isstream.js",
-    "scripts": {
-        "test": "tar --xform 's/^package/readable-stream-1.0/' -zxf readable-stream-1.0.*.tgz && tar --xform 's/^package/readable-stream-1.1/' -zxf readable-stream-1.1.*.tgz && node test.js; rm -rf readable-stream-1.?/"
+    "devDependencies": {
+        "core-util-is": "~1.0.0",
+        "inherits": "~2.0.1",
+        "isarray": "0.0.1",
+        "string_decoder": "~0.10.x",
+        "tape": "~2.12.3"
     },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/rvagg/isstream.git"
+    "directories": {},
+    "dist": {
+        "shasum": "47e63f7af55afa6f92e1500e690eb8b8529c099a",
+        "tarball": "https://registry.npmjs.org/isstream/-/isstream-0.1.2.tgz"
     },
+    "gitHead": "cd39cba6da939b4fc9110825203adc506422c3dc",
+    "homepage": "https://github.com/rvagg/isstream",
     "keywords": [
         "stream",
         "type",
@@ -53,19 +64,24 @@
         "readable-stream",
         "hippo"
     ],
-    "devDependencies": {
-        "tape": "~2.12.3",
-        "core-util-is": "~1.0.0",
-        "isarray": "0.0.1",
-        "string_decoder": "~0.10.x",
-        "inherits": "~2.0.1"
-    },
-    "author": "Rod Vagg <rod@vagg.org>",
     "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/rvagg/isstream/issues"
+    "main": "isstream.js",
+    "maintainers": [
+        {
+            "name": "rvagg"
+        }
+    ],
+    "name": "isstream",
+    "optionalDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rvagg/isstream.git"
     },
-    "homepage": "https://github.com/rvagg/isstream"
+    "scripts": {
+        "test": "tar --xform 's/^package/readable-stream-1.0/' -zxf readable-stream-1.0.*.tgz && tar --xform 's/^package/readable-stream-1.1/' -zxf readable-stream-1.1.*.tgz && node test.js; rm -rf readable-stream-1.?/"
+    },
+    "version": "0.1.2",
+    "bin": {}
 }
 ```
 
